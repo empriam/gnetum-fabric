@@ -68,16 +68,6 @@ public class GuiMixin {
         HudEngine.onElementReturn();
     }
 
-    @Inject(method = "renderItemHotbar", at = @At("HEAD"), cancellable = true, require = 0)
-    private void gnetum$head_hotbar_0(CallbackInfo ci) {
-        if (HudEngine.onElementHead("minecraft:hotbar")) ci.cancel();
-    }
-
-    @Inject(method = "renderItemHotbar", at = @At("RETURN"), require = 0)
-    private void gnetum$return_hotbar_0(CallbackInfo ci) {
-        HudEngine.onElementReturn();
-    }
-
     @Inject(method = "renderHotbar", at = @At("HEAD"), cancellable = true, require = 0)
     private void gnetum$head_hotbar_1(CallbackInfo ci) {
         if (HudEngine.onElementHead("minecraft:hotbar")) ci.cancel();
@@ -95,26 +85,6 @@ public class GuiMixin {
 
     @Inject(method = "renderPlayerHealth", at = @At("RETURN"), require = 0)
     private void gnetum$return_player_health_0(CallbackInfo ci) {
-        HudEngine.onElementReturn();
-    }
-
-    @Inject(method = "renderFood", at = @At("HEAD"), cancellable = true, require = 0)
-    private void gnetum$head_food_level_0(CallbackInfo ci) {
-        if (HudEngine.onElementHead("minecraft:food_level")) ci.cancel();
-    }
-
-    @Inject(method = "renderFood", at = @At("RETURN"), require = 0)
-    private void gnetum$return_food_level_0(CallbackInfo ci) {
-        HudEngine.onElementReturn();
-    }
-
-    @Inject(method = "renderAir", at = @At("HEAD"), cancellable = true, require = 0)
-    private void gnetum$head_air_level_0(CallbackInfo ci) {
-        if (HudEngine.onElementHead("minecraft:air_level")) ci.cancel();
-    }
-
-    @Inject(method = "renderAir", at = @At("RETURN"), require = 0)
-    private void gnetum$return_air_level_0(CallbackInfo ci) {
         HudEngine.onElementReturn();
     }
 
@@ -158,13 +128,4 @@ public class GuiMixin {
         HudEngine.onElementReturn();
     }
 
-    @Inject(method = "renderSubtitles", at = @At("HEAD"), cancellable = true, require = 0)
-    private void gnetum$head_subtitles_0(CallbackInfo ci) {
-        if (HudEngine.onElementHead("minecraft:subtitles")) ci.cancel();
-    }
-
-    @Inject(method = "renderSubtitles", at = @At("RETURN"), require = 0)
-    private void gnetum$return_subtitles_0(CallbackInfo ci) {
-        HudEngine.onElementReturn();
-    }
 }

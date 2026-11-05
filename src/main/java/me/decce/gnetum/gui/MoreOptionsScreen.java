@@ -1,5 +1,6 @@
 package me.decce.gnetum.gui;
 
+import me.decce.gnetum.mixins.AbstractWidgetAccessor;
 import me.decce.gnetum.Gnetum;
 import me.decce.gnetum.GnetumConfig;
 import me.decce.gnetum.PerformanceAnalyzer;
@@ -57,7 +58,7 @@ public class MoreOptionsScreen extends BaseScreen {
         widget.setX(x);
         widget.setY(y);
         widget.setWidth(BUTTON_WIDTH);
-        widget.setHeight(BUTTON_HEIGHT);
+        ((AbstractWidgetAccessor) widget).gnetum$setHeight(BUTTON_HEIGHT);
         this.addRenderableWidget(widget);
         if (count % 2 == 1) {
             y += BUTTON_HEIGHT + MARGIN;

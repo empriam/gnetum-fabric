@@ -1,5 +1,6 @@
 package me.decce.gnetum.gui;
 
+import me.decce.gnetum.mixins.AbstractWidgetAccessor;
 import me.decce.gnetum.Gnetum;
 import me.decce.gnetum.PerformanceAnalyzer;
 import me.decce.gnetum.gui.widgets.ToggleButton;
@@ -63,7 +64,7 @@ public class ConfigScreen extends BaseScreen {
                     .build();
             btnAnalysis.setPosition(width / 2 + 10 + 120 - 20, height / 2 - 90);
             btnAnalysis.setWidth(20);
-            btnAnalysis.setHeight(20);
+            ((AbstractWidgetAccessor) btnAnalysis).gnetum$setHeight(20);
             btnAnalysis.active = !analysis.isOutdated();
 
             Component tooltip = Component.translatable(

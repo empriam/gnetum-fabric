@@ -1,5 +1,6 @@
 package me.decce.gnetum.gui;
 
+import me.decce.gnetum.mixins.AbstractWidgetAccessor;
 import com.google.common.collect.Maps;
 import me.decce.gnetum.CacheSetting;
 import me.decce.gnetum.Gnetum;
@@ -77,7 +78,7 @@ public class ElementsScreen extends BaseScreen {
         this.searchBox.setX(xlb + 2);
         this.searchBox.setY(y - h - margin);
         this.searchBox.setWidth(2 * wb + 2 * ws);
-        this.searchBox.setHeight(h);
+        ((AbstractWidgetAccessor) this.searchBox).gnetum$setHeight(h);
         this.addRenderableWidget(searchBox);
 
         boolean left = true;
