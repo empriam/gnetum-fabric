@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "me.decce.gnetum.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "GuiMixin",
+    "DebugScreenOverlayMixin",
+    "GameRendererMixin",
+    "GlStateManagerMixin",
+    "MinecraftAccessor",
+    "MinecraftMixin",
+    "PoseStackAccessor",
+    "RenderTargetMixin",
+    "compat.ItemRendererMixin"
+  ],
+  "mixins": [],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

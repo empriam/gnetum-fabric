@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "gnetum",
+  "version": "${version}",
+  "name": "Gnetum",
+  "description": "Minecraft mod that distributes HUD updates over multiple frames to improve performance.",
+  "authors": ["decce"],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/gnetum/",
+    "issues": "https://github.com/decce6/Gnetum/issues"
+  },
+  "license": "LGPL-3.0-only",
+  "icon": "gnetum.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["me.decce.gnetum.Gnetum"],
+    "modmenu": ["me.decce.gnetum.GnetumModMenu"]
+  },
+  "mixins": ["gnetum.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
